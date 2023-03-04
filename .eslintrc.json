@@ -1,0 +1,115 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/essential",
+    "plugin:vue/vue3-recommended",
+    "airbnb-base"
+  ],
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "sourceType": "module"
+  },
+  "globals": {
+    "defineProps": "readonly",
+    "defineEmits": "readonly",
+    "defineExpose": "readonly",
+    "withDefaults": "readonly"
+  },
+  "plugins": [
+    "vue"
+  ],
+  "rules": {
+    "indent": ["error", 4],
+    "max-len": [
+      "warn", {
+        "code": 120,
+        "ignorePattern": "(class=*)|(console\\.*)|(log(ger)?\\.*)|(\\w+=\"*\")|(\\.* \\{)|(throw*)",
+        "ignoreStrings": true,
+        "ignoreComments": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "operator-linebreak": ["error", "before"],
+    "implicit-arrow-linebreak": "off",
+    "no-trailing-spaces": "off",
+    "no-alert": "off",
+    "no-console": "off",
+    "radix": "off",
+    "no-underscore-dangle": [
+      "warn",
+      {
+        "allow": ["_id", "_startTime", "_parsedOriginalUrl", "_parsedUrl", "_context"]
+      }
+    ],
+    "no-plusplus": [
+      "warn",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "no-else-return": [
+      "warn",
+      {
+        "allowElseIf": true
+      }
+    ],
+    "no-use-before-define": "off",
+    "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"],
+    "prefer-promise-reject-errors": "off",
+    // Vue
+    "vue/no-v-html": "off",
+    "vue/html-indent": ["error", 4],
+    "vue/html-closing-bracket-newline": [
+      "error", {
+        "singleline": "never",
+        "multiline": "never"
+      }
+    ],
+    "vue/singleline-html-element-content-newline": "off",
+    "vue/script-indent": [
+      "error",
+      4,
+      {
+        "baseIndent": 1
+      }
+    ],
+    "vue/multiline-html-element-content-newline": "error",
+    "vue/attribute-hyphenation": ["error", "always", {
+      "ignore": [
+        "allowTables",
+        "allowTextColor",
+        "allowDate",
+        "allowIndentation",
+        "allowRule",
+        "allowFindReplace",
+        "allowStatus",
+        "allowPanel",
+        "allowKeyboardAccessibleDatepicker",
+        "insertMenuItems"
+      ]
+    }],
+    "vue/no-template-shadow": "off",
+    "vue/no-multiple-template-root": 0
+  },
+  "overrides": [
+    {
+      "files": ["*.vue"],
+      "rules": {
+        "indent": "off"
+      }
+    }
+  ]
+}
